@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cairo+Play&display=swap');
+@import url(fonts.css);
 
 body {
     font-family: 'Cairo Play', sans-serif;
@@ -15,5 +15,5 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bungee Spice', cursive;
+    font-family: 'Bungee Spice', sans-serif;
 }
