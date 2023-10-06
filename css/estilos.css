@@ -17,3 +17,37 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bungee Spice', sans-serif;
 }
+
+img, audio, video {
+    width: 100%;
+}
+
+.aspecto {
+   position: relative;
+   height: 0px;
+   width: 100%;   
+}
+ 
+.a16x9 {
+    padding-bottom: 56.25%;
+}
+
+.a4x3 {
+    padding-bottom: 75%;
+}
+
+.a21x9 {
+    padding-bottom: 42.86%;
+}
+
+.a1x1 {
+    padding-bottom: 100%;
+}
+
+.aspecto iframe {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+}
