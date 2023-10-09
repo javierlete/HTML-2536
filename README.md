@@ -9,6 +9,10 @@
 * Flexbox Froggy: https://flexboxfroggy.com/#es
 * Grid Garden: https://cssgridgarden.com/#es
 
+## Ejercicios
+
+* FreeCodeCamp: https://www.freecodecamp.org/espanol/
+
 ## Referencias
 
 * Position: https://developer.mozilla.org/es/docs/Web/CSS/position
