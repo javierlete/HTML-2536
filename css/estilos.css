@@ -215,3 +215,20 @@ aside {
 
     }
 }
+
+#redes-sociales li {
+    display: inline-block;
+}
+
+#arriba {
+    position: fixed;
+    bottom: var(--margen-grande);
+    right: var(--margen-grande);
+
+    background-color: var(--color-fondo-suave);
+    border: 1px solid var(--color-fondo-medio);
+    border-radius: 100%;
+    padding: 0 var(--margen-pequeno);
+
+    box-shadow: 3px 3px var(--margen-pequeno) rgba(0, 0, 0, 0.5);
+}
