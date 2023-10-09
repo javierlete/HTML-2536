@@ -232,3 +232,8 @@ aside {
 
     box-shadow: 3px 3px var(--margen-pequeno) rgba(0, 0, 0, 0.5);
 }
+
+#arriba:active {
+    box-shadow: 0 0 0;
+    transform: scale3d(0.9, 0.9, 1);
+}
