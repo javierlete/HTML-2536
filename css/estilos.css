@@ -1,7 +1,71 @@
+@import url(variables.css);
 @import url(fonts.css);
 
+/* Reseteo */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Etiquetas generales */
+
 body {
-    font-family: 'Cairo Play', sans-serif;
+    font-family: var(--font-texto);
+    margin: 0;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+pre {
+    overflow: auto;
+
+    background-color: var(--color-fondo-suave);
+    padding: var(--margen-pequeno);
+    border-radius: var(--margen-pequeno);
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: var(--margen-pequeno);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    & thead {
+        background-color: var(--color-texto);
+        color: var(--color-fondo);
+    }
+    
+    & tbody tr:nth-of-type(even) {
+        background-color: var(--color-fondo-suave);
+    }
+    
+    & th,
+    td {
+        border: 1px solid var(--color-fondo-medio);
+        padding: var(--margen-pequeno);
+    }
+
+    & th {
+
+        &:first-of-type {
+            text-align: right;
+        }
+
+        &:not(:first-of-type) {
+            text-align: left;
+        }
+    }
 }
 
 a {
@@ -14,20 +78,39 @@ a:hover {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bungee Spice', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-titulos);
 }
 
-img, audio, video {
+figure,
+img,
+audio,
+video,
+iframe {
+    margin: 0;
     width: 100%;
+    border-radius: var(--margen-pequeno);
+    border: 0;
+}
+
+.destacado {
+    padding: 0 var(--margen-pequeno);
+    background-color: var(--color-fondo-suave);
+    border-radius: var(--margen-pequeno);
+    font-weight: bold;
 }
 
 .aspecto {
-   position: relative;
-   height: 0px;
-   width: 100%;   
+    position: relative;
+    height: 0px;
+    width: 100%;
 }
- 
+
 .a16x9 {
     padding-bottom: 56.25%;
 }
@@ -45,9 +128,89 @@ img, audio, video {
 }
 
 .aspecto iframe {
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   width: 100%;
-   height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estructura */
+
+header,
+footer {
+    padding: var(--margen-grande);
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    text-align: center;
+
+    & h1 {
+        margin-top: 0;
+        color: var(--color-fondo);
+    }
+
+    & ul {
+        padding: 0;
+
+        & li {
+            list-style: none;
+
+            & a {
+                display: inline-block;
+
+                padding: 0 var(--margen-pequeno);
+                border-radius: var(--margen-pequeno);
+                color: var(--color-fondo);
+
+                &:hover {
+                    text-decoration: none;
+                    font-weight: normal;
+
+                    background-color: var(--color-fondo);
+                    color: var(--color-texto);
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: var(--margen-pequeno);
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    background-color: var(--color-texto);
+    border-radius: var(--margen-pequeno);
+}
+
+h3 {
+    background-color: var(--color-fondo-suave);
+    margin: var(--margen-pequeno) calc(-1 * var(--margen-pequeno));
+    padding: var(--margen-pequeno);
+}
+
+label, input, select, textarea {
+    width: 100%;
+}
+
+input, select, textarea, button, fieldset {
+    margin-bottom: var(--margen-pequeno);
+    border: 1px solid var(--color-fondo-medio);
+    border-radius: var(--margen-pequeno);
+    padding: var(--margen-pequeno);
+}
+
+aside {
+    background-color: var(--color-fondo-suave);
+
+    & ul {
+        padding: var(--margen-pequeno);
+    }
+
+    & li {
+        list-style: none;
+
+    }
 }

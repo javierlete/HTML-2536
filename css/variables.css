@@ -1,0 +1,12 @@
+:root {
+    --font-titulos: 'Bungee Spice', sans-serif;
+    --font-texto: 'Cairo Play', sans-serif;
+
+    --color-fondo: white;
+    --color-texto: black;
+    --color-fondo-medio: gray;
+    --color-fondo-suave: lightgray;
+
+    --margen-pequeno: 0.5rem;
+    --margen-grande: 1rem;
+}
