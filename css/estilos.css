@@ -346,3 +346,26 @@ aside {
         display: none;
     }
 }
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    header, footer {
+        width: 100%;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    aside {
+        width: 10%;
+
+        & ul {
+            flex-direction: column;
+        }
+    }
+}
