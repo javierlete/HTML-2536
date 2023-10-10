@@ -369,3 +369,119 @@ aside {
         }
     }
 }
+
+@media (min-width: 1440px) {
+    #html {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr; /* repeat(2, 1fr); */
+        gap: var(--margen-pequeno);
+
+        grid-template-areas:
+            "titulo-articulo titulo-articulo titulo-articulo"
+            "titulos parrafos multimedia"
+            "vinculos parrafos multimedia"
+            "listas parrafos multimedia"
+            "tablas . multimedia"
+            " . . multimedia"
+            "formularios formularios formularios";
+    }
+
+    h2, #titulos, #vinculos, #parrafos, #listas, #tablas, #multimedia, #formularios {
+        width: 100%;
+    }
+
+    h2 {
+        grid-area: titulo-articulo;
+    }
+
+    #titulos {
+        grid-area: titulos;
+    }
+
+    #vinculos {
+        grid-area: vinculos;
+    }
+
+    #parrafos {
+        grid-area: parrafos;
+    }
+
+    #listas {
+        grid-area: listas;
+    }
+
+    #tablas {
+        grid-area: tablas;
+    }
+
+    #multimedia {
+        grid-area: multimedia;
+    }
+
+    #formularios {
+        grid-area: formularios;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--margen-pequeno);
+
+        & h3 {
+            grid-column-end: span 2;
+        }
+
+        & form {
+            width: 100%;
+        }
+
+        & form:nth-of-type(2) {
+            grid-column-start: 1;
+        }
+
+        & form:last-of-type {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-end: span 3;
+        }
+    }
+}
+
+@media (min-width: 2560px) {
+    #html {
+        grid-template-columns: auto 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo-articulo titulo-articulo titulo-articulo titulo-articulo"
+            "titulos parrafos multimedia multimedia"
+            "vinculos parrafos multimedia multimedia"
+            "listas parrafos multimedia multimedia"
+            "tablas parrafos multimedia multimedia"
+            ". . multimedia multimedia"
+            "formularios formularios multimedia multimedia"
+            ;
+
+        align-items: start;
+    }
+
+    #multimedia {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & h3 {
+            grid-column-end: span 2;
+        }
+
+        & audio {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            grid-column-end: span 2;
+        }
+
+        & .aspecto:first-of-type {
+            grid-row-end: span 2;
+        }
+
+        & .aspecto:last-of-type {
+            grid-row-start: 3;
+            grid-column-start: 2;
+        }
+    }
+}
