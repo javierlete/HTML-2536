@@ -447,15 +447,15 @@ aside {
 
 @media (min-width: 2560px) {
     #html {
-        grid-template-columns: auto 1fr 1fr 1fr;
+        grid-template-columns: auto 1fr 2fr;
         grid-template-areas:
-            "titulo-articulo titulo-articulo titulo-articulo titulo-articulo"
-            "titulos parrafos multimedia multimedia"
-            "vinculos parrafos multimedia multimedia"
-            "listas parrafos multimedia multimedia"
-            "tablas parrafos multimedia multimedia"
-            ". . multimedia multimedia"
-            "formularios formularios multimedia multimedia"
+            "titulo-articulo titulo-articulo titulo-articulo"
+            "titulos parrafos multimedia"
+            "vinculos parrafos multimedia"
+            "listas parrafos multimedia"
+            "tablas parrafos multimedia"
+            ". . multimedia"
+            "formularios formularios multimedia"
             ;
 
         align-items: start;
