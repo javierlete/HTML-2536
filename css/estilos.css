@@ -41,16 +41,16 @@ dd {
 table {
     width: 100%;
     border-collapse: collapse;
-    
+
     & thead {
         background-color: var(--color-texto);
         color: var(--color-fondo);
     }
-    
+
     & tbody tr:nth-of-type(even) {
         background-color: var(--color-fondo-suave);
     }
-    
+
     & th,
     td {
         border: 1px solid var(--color-fondo-medio);
@@ -192,11 +192,18 @@ h3 {
     padding: var(--margen-pequeno);
 }
 
-label, input, select, textarea {
+label,
+input,
+select,
+textarea {
     width: 100%;
 }
 
-input, select, textarea, button, fieldset {
+input,
+select,
+textarea,
+button,
+fieldset {
     margin-bottom: var(--margen-pequeno);
     border: 1px solid var(--color-fondo-medio);
     border-radius: var(--margen-pequeno);
@@ -236,4 +243,106 @@ aside {
 #arriba:active {
     box-shadow: 0 0 0;
     transform: scale3d(0.9, 0.9, 1);
+}
+
+@media (min-width: 768px) {
+    header ul {
+        display: flex;
+    }
+
+    #html {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        width: 100%;
+    }
+
+    #titulos {
+        order: 1;
+        width: 25%;
+    }
+
+    #vinculos {
+        order: 2;
+
+        width: 25%;
+
+        & p {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #parrafos {
+        order: 5;
+
+        width: 50%;
+    }
+
+    #listas {
+        order: 3;
+
+        width: 25%;
+    }
+
+    #tablas {
+        order: 4;
+
+        width: 25%;
+    }
+
+    #multimedia {
+        order: 6;
+
+        width: 50%;
+    }
+
+    #formularios {
+        order: 7;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        & h3 {
+            width: 100%;
+        }
+
+        & form {
+            width: 50%;
+
+            & fieldset {
+                height: 100%;
+            }
+
+            &:last-of-type {
+                width: 100%;
+
+                display: flex;
+                flex-wrap: wrap;
+
+                & > * {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    aside ul {
+        display: flex;
+
+        & li {
+            padding: 0 var(--margen-pequeno)
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #arriba {
+        display: none;
+    }
 }
