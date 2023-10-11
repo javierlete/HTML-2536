@@ -42,7 +42,7 @@ table {
     width: 100%;
     border-collapse: collapse;
 
-    & thead {
+    & thead, & tfoot {
         background-color: var(--color-texto);
         color: var(--color-fondo);
     }
@@ -268,8 +268,14 @@ aside {
         top: 0;
         z-index: 100;
 
+        display: flex;
+
         & ul {
             display: flex;
+        }
+
+        & ul:last-of-type {
+            margin-left: auto;
         }
     }
 

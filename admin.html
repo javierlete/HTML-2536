@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Curso de HTML</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#titulos">Títulos</a></li>
+            <li><a href="#parrafos">Párrafos</a></li>
+            <li><a href="#vinculos">Vínculos</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#formularios">Formularios</a></li>
+        </ul>
+        <ul>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="index.html">Volver a principal</a></li>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <caption>Listado de productos</caption>
+            <thead>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>OPCIONES</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Producto A</td>
+                    <td>10,00 €</td>
+                    <td>Descripción del Producto A</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Producto B</td>
+                    <td>15,00 €</td>
+                    <td>Descripción del Producto B</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Producto C</td>
+                    <td>20,00 €</td>
+                    <td>Descripción del Producto C</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button>Añadir</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+        <p>&copy;2023 Javier Lete García</p>
+        <p>
+            <a href="tel:944444444">94 444 4444</a>
+            <a href="mailto:pepe@perez.com">pepe@perez.com</a>
+            <a href="geo:43.2577928,-2.9139809">Posición GPS</a>
+        </p>
+        <ul id="redes-sociales">
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+        <p id="arriba">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>
