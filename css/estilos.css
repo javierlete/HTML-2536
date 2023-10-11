@@ -71,7 +71,7 @@ table {
 
 a {
     text-decoration: none;
-    color: rgb(51, 99, 154);
+    color: var(--color-enlace);
 }
 
 a:hover {
@@ -183,6 +183,14 @@ nav {
     }
 }
 
+footer a {
+    color: var(--color-fondo);
+
+    &:hover {
+        color: var(--color-enlace);
+    }
+}
+
 main {
     padding: var(--margen-pequeno);
 }
@@ -237,6 +245,7 @@ aside {
 
 #arriba {
     position: fixed;
+
     bottom: var(--margen-grande);
     right: var(--margen-grande);
 
@@ -388,28 +397,22 @@ aside {
 @media (min-width: 1440px) {
     #html {
         display: grid;
-        grid-template-columns: auto 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         /* repeat(2, 1fr); */
         gap: var(--margen-pequeno);
 
         grid-template-areas:
             "titulo-articulo titulo-articulo titulo-articulo"
-            "titulos parrafos multimedia"
-            "vinculos parrafos multimedia"
-            "listas parrafos multimedia"
-            "tablas . multimedia"
-            " . . multimedia"
-            "formularios formularios formularios";
+            "titulos         multimedia      parrafos       "
+            "vinculos        multimedia      parrafos       "
+            "listas          multimedia      parrafos       "
+            "tablas          multimedia      parrafos       "
+            " .              multimedia      .              "
+            "formularios     formularios     formularios    "
+            ;
     }
 
-    h2,
-    #titulos,
-    #vinculos,
-    #parrafos,
-    #listas,
-    #tablas,
-    #multimedia,
-    #formularios {
+    #html>* {
         width: 100%;
     }
 
@@ -473,12 +476,12 @@ aside {
         grid-template-columns: auto 1fr 2fr;
         grid-template-areas:
             "titulo-articulo titulo-articulo titulo-articulo"
-            "titulos parrafos multimedia"
-            "vinculos parrafos multimedia"
-            "listas parrafos multimedia"
-            "tablas parrafos multimedia"
-            ". . multimedia"
-            "formularios formularios multimedia"
+            "titulos         parrafos        multimedia"
+            "vinculos        parrafos        multimedia"
+            "listas          parrafos        multimedia"
+            "tablas          parrafos        multimedia"
+            ".               .               multimedia"
+            "formularios     formularios     multimedia"
         ;
 
         align-items: start;
@@ -487,6 +490,7 @@ aside {
     #multimedia {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: var(--margen-pequeno);
 
         & h3 {
             grid-column-end: span 2;
