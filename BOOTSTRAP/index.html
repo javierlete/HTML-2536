@@ -8,14 +8,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Curso de HTML</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,31 +42,33 @@
     <header>
         <h1 class="display-1 text-center">Curso de HTML</h1>
     </header>
-    
+
     <main class="container">
-        <article id="html">
-            <h2 class="display-6 text-center">HTML</h2>
+        <article class="row" id="html">
+            <h2 class="order-sm-first display-6 text-center">HTML</h2>
 
-            <section id="titulos">
-                <h3>Títulos</h3>
+            <div class="order-sm-first col-sm-6 col-xl-2">
+                <section id="titulos">
+                    <h3>Títulos</h3>
 
-                <!-- h1*6>{Título $} -->
+                    <!-- h1*6>{Título $} -->
 
-                <h4>Título 4</h4>
-                <h5>Título 5</h5>
-                <h6>Título 6</h6>
-            </section>
+                    <h4>Título 4</h4>
+                    <h5>Título 5</h5>
+                    <h6>Título 6</h6>
+                </section>
 
-            <section id="vinculos">
-                <h3>Vínculos</h3>
+                <section id="vinculos">
+                    <h3>Vínculos</h3>
 
-                <p>
-                    <a href="https://www.google.es">Google (vínculo externo, absoluto)</a>
-                    <a href="pagina2.html">Página 2 (relativo)</a>
-                </p>
-            </section>
+                    <p>
+                        <a href="https://www.google.es">Google (vínculo externo, absoluto)</a>
+                        <a href="pagina2.html">Página 2 (relativo)</a>
+                    </p>
+                </section>
+            </div>
 
-            <section id="parrafos" lang="zxx">
+            <section class="order-md-0 col-md-6 col-xl-5" id="parrafos" lang="zxx">
                 <h3>Párrafos</h3>
 
                 <p>Lorem, ipsum.</p>
@@ -107,7 +109,7 @@
 }</pre>
             </section>
 
-            <section id="listas">
+            <section class="order-sm-first col-sm-6 col-xl-2" id="listas">
                 <h3>Listas</h3>
 
                 <ul>
@@ -137,7 +139,7 @@
                 </dl>
             </section>
 
-            <section id="tablas">
+            <section class="order-md-2 col-xl-4" id="tablas">
                 <h3>Tablas</h3>
 
                 <table class="table table-bordered table-striped table-hover">
@@ -169,7 +171,7 @@
                 </table>
             </section>
 
-            <section id="multimedia">
+            <section class="order-md-1 col-md-6 col-xl-3" id="multimedia">
                 <h3>Multimedia</h3>
 
                 <figure class="figure">
@@ -205,88 +207,86 @@
                 </div>
             </section>
 
-            <section id="formularios">
-                <h3>Formularios</h3>
-
-                <form>
-                    <fieldset>
-                        <legend>Login</legend>
-
-                        <div class="row mb-3">
-                            <label class="col-sm-4 col-form-label" for="email">Correo Electrónico</label>
-                            <div class="col-sm">
-                                <input class="form-control" type="email" name="email" id="email" required placeholder="Tu correo más habitual">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-4 col-form-label" for="password">Contraseña</label>
-                            <div class="col-sm">
-                                <input class="form-control" type="password" name="password" id="password" required placeholder="Que sea difícil">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="offset-sm-4 col-sm">
-                                <button class="btn btn-primary">Login</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-
-                <form class="mb-3" action="https://www.google.es/search">
-                    <fieldset>
-                        <legend>Búsqueda en Google</legend>
-
-                        <input class="form-control mb-2" type="text" name="q">
-                        <button class="btn btn-primary">Buscar</button>
-                    </fieldset>
-                </form>
-
-                <form>
-                    <input class="form-control mb-2" type="number" step=".01" min="0">
-                    <input class="form-control mb-2" type="time">
-                    <input class="form-control mb-2" type="date">
-                    <input class="form-control mb-2" type="datetime-local">
-
-                    <input class="form-check-input" type="checkbox">
-
-                    <input class="form-check-input" type="radio" name="nivel" value="1">
-                    <input class="form-check-input" type="radio" name="nivel" value="2">
-
-                    <select class="form-select mb-2">
-                        <option value="1">Uno</option>
-                        <option value="2">Dos</option>
-                        <option value="3">Tres</option>
-                    </select>
-
-                    <select class="form-select mb-2" multiple>
-                        <option value="1">Uno</option>
-                        <option value="2">Dos</option>
-                        <option value="3">Tres</option>
-                    </select>
-
-                    <textarea class="form-control mb-2" cols="30" rows="10"></textarea>
-
-                    <input class="form-control mb-2" type="color">
-                    <input class="form-control mb-2" type="tel">
-                    <input class="form-control mb-2" type="week">
-                    <input class="form-range mb-2" type="range" min="0" max="10" step="2">
-                </form>
+            <section class="order-md-3 col-xl-8" id="formularios">
+                <div class="row">
+                    <h3>Formularios</h3>
+                    <div class="col-lg-6">
+                        <form class="mb-3">
+                            <fieldset>
+                                <legend>Login</legend>
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label" for="email">Correo Electrónico</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="email" name="email" id="email" required
+                                            placeholder="Tu correo más habitual">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label" for="password">Contraseña</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="password" name="password" id="password" required
+                                            placeholder="Que sea difícil">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="offset-sm-4 col-sm">
+                                        <button class="btn btn-primary">Login</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <form class="mb-3" action="https://www.google.es/search">
+                            <fieldset>
+                                <legend>Búsqueda en Google</legend>
+                                <input class="form-control mb-2" type="text" name="q">
+                                <button class="btn btn-primary">Buscar</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <form class="col-lg-6">
+                        <input class="form-control mb-2" type="number" step=".01" min="0">
+                        <input class="form-control mb-2" type="time">
+                        <input class="form-control mb-2" type="date">
+                        <input class="form-control mb-2" type="datetime-local">
+                        <input class="form-check-input" type="checkbox">
+                        <input class="form-check-input" type="radio" name="nivel" value="1">
+                        <input class="form-check-input" type="radio" name="nivel" value="2">
+                        <select class="form-select mb-2">
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+                        <select class="form-select mb-2" multiple>
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+                        <textarea class="form-control mb-2" cols="30" rows="10"></textarea>
+                        <input class="form-control mb-2" type="color">
+                        <input class="form-control mb-2" type="tel">
+                        <input class="form-control mb-2" type="week">
+                        <input class="form-range mb-2" type="range" min="0" max="10" step="2">
+                    </form>
+                </div>
             </section>
         </article>
     </main>
     <aside class="text-bg-secondary">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column flex-sm-row">
             <li class="nav-item"><a class="nav-link text-white" href="#">Primero</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Segundo</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Tercero</a></li>
         </ul>
     </aside>
-    <footer class="text-bg-dark p-2 text-center">
+    <footer class="text-bg-dark p-2 text-center d-md-flex justify-content-between">
         <p>&copy;2023 Javier Lete García</p>
         <p>
-            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light" href="tel:944444444">94 444 4444</a>
-            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light" href="mailto:pepe@perez.com">pepe@perez.com</a>
-            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light" href="geo:43.2577928,-2.9139809">Posición GPS</a>
+            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light"
+                href="tel:944444444">94 444 4444</a>
+            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light"
+                href="mailto:pepe@perez.com">pepe@perez.com</a>
+            <a class="text-white link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-underline-light"
+                href="geo:43.2577928,-2.9139809">Posición GPS</a>
         </p>
         <ul class="list-unstyled d-flex justify-content-center" id="redes-sociales">
             <li><a href="#" target="_blank"><i class="px-1 bi bi-facebook text-white"></i></i></a></li>
@@ -294,8 +294,9 @@
             <li><a href="#" target="_blank"><i class="px-1 bi bi-youtube text-white"></i></i></a></li>
             <li><a href="#" target="_blank"><i class="px-1 bi bi-tiktok text-white"></i></i></a></li>
         </ul>
-        <p class="position-fixed bottom-0 end-0 m-3" id="arriba">
-            <a class="bg-body-tertiary rounded-circle px-1 border shadow" href="#"><i class="bi bi-arrow-up text-dark"></i></a>
+        <p class="position-fixed bottom-0 end-0 m-3 d-sm-none" id="arriba">
+            <a class="bg-body-tertiary rounded-circle px-1 border shadow" href="#"><i
+                    class="bi bi-arrow-up text-dark"></i></a>
         </p>
     </footer>
 </body>
