@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Curso de HTML</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#titulos">Títulos</a></li>
+            <li><a href="#parrafos">Párrafos</a></li>
+            <li><a href="#vinculos">Vínculos</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#formularios">Formularios</a></li>
+        </ul>
+        <ul>
+            <li><a href="admin.html">Administración</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Producto</legend>
+                <div>
+                    <label for="producto-id">Id</label>
+                    <input type="number" min="0" id="producto-id" name="producto-id">
+                </div>
+
+                <div>
+                    <label for="producto-nombre">Nombre</label>
+                    <input type="text" required minlength="3" id="producto-nombre" name="producto-nombre">
+                </div>
+
+                <div>
+                    <label for="producto-precio">Precio</label>
+                    <input type="number" required step=".01" min="0" id="producto-precio" name="producto-precio"
+                        placeholder="Precio en euros">
+                </div>
+
+                <div>
+                    <label for="producto-descripcion">Descripción</label>
+                    <textarea id="producto-descripcion" name="producto-descripcion"></textarea>
+                </div>
+
+                <div>
+                    <label for="">&nbsp;</label>
+                    <button type="submit">Guardar</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;2023 Javier Lete García</p>
+        <p>
+            <a href="tel:944444444">94 444 4444</a>
+            <a href="mailto:pepe@perez.com">pepe@perez.com</a>
+            <a href="geo:43.2577928,-2.9139809">Posición GPS</a>
+        </p>
+        <ul id="redes-sociales">
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+        <p id="arriba">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>
