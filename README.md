@@ -19,3 +19,7 @@
 * Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 * Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
 
+## Tutoriales
+
+MDN (Mozilla Development Network): https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web
+The Modern JavaScript Tutorial: https://es.javascript.info/
