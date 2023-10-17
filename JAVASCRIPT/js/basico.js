@@ -229,18 +229,25 @@ function adivinaElNumero() {
     // Elegir número a adivinar
     const adivinar = Math.floor((Math.random() * 100) + 1);
 
-    console.log(adivinar);
-
     let numero;
 
     do {
         // "Dime un número"
         numero = parseInt(prompt('Dime un número'));
-        console.log(numero);
-    } while(numero != adivinar); // numero == adivinar (No)
 
-    // "FELICIDADES, HAS ACERTADO"
-    alert('Felicidades, has acertado');
+        if(adivinar < numero) {
+            // Es menor
+            alert('Es menor');
+        } else if(adivinar > numero) {
+            // Es mayor
+            alert('Es mayor');
+        } else {
+            // "FELICIDADES, HAS ACERTADO"
+            alert('Felicidades, has acertado');
+        }
+
+    } while(numero != adivinar); // adivinar != numero
+
 }
 
 // variables();
