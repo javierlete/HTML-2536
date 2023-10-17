@@ -228,12 +228,16 @@ function estructurasDeControl() {
 function adivinaElNumero() {
     // Elegir número a adivinar
     const adivinar = Math.floor((Math.random() * 100) + 1);
+    // Poner intentos a 0
+    let intentos = 0;
 
     let numero;
 
     do {
         // "Dime un número"
         numero = parseInt(prompt('Dime un número'));
+        // Incrementar en uno los intentos;
+        intentos++;
 
         if(adivinar < numero) {
             // Es menor
@@ -243,7 +247,7 @@ function adivinaElNumero() {
             alert('Es mayor');
         } else {
             // "FELICIDADES, HAS ACERTADO"
-            alert('Felicidades, has acertado');
+            alert('Felicidades, has acertado. Has necesitado ' + intentos + ' intentos');
         }
 
     } while(numero != adivinar); // adivinar != numero
