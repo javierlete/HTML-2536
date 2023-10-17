@@ -230,14 +230,16 @@ function adivinaElNumero() {
     const adivinar = Math.floor((Math.random() * 100) + 1);
     // Poner intentos a 0
     let intentos = 0;
+    let vidas = 5;
 
     let numero;
 
     do {
         // "Dime un número"
-        numero = parseInt(prompt('Dime un número'));
+        numero = parseInt(prompt(`Dime un número (tienes ${vidas} vidas)`));
         // Incrementar en uno los intentos;
         intentos++;
+        vidas--;
 
         if(adivinar < numero) {
             // Es menor
@@ -248,6 +250,11 @@ function adivinaElNumero() {
         } else {
             // "FELICIDADES, HAS ACERTADO"
             alert('Felicidades, has acertado. Has necesitado ' + intentos + ' intentos');
+        }
+
+        if(vidas == 0) {
+            alert('GAME OVER');
+            break;
         }
 
     } while(numero != adivinar); // adivinar != numero
