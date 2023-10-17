@@ -21,5 +21,5 @@
 
 ## Tutoriales
 
-MDN (Mozilla Development Network): https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web
-The Modern JavaScript Tutorial: https://es.javascript.info/
+* MDN (Mozilla Development Network): https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web
+* The Modern JavaScript Tutorial: https://es.javascript.info/
