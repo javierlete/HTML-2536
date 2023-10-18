@@ -107,11 +107,11 @@ function arrays() {
 
     console.log(arr[9], arr['perro'], arr.casa);
 
-    for(let clave in arr) {
+    for (let clave in arr) {
         console.log(clave, arr[clave]);
     }
 
-    for(let valor of arr) {
+    for (let valor of arr) {
         console.log(valor);
     }
 }
@@ -126,11 +126,11 @@ function diccionario() {
 
     alert(dic[clave] || 'No tengo traducción');
 
-    for(let clave in dic) { // Recorre todos los índices que existen sean numéricos o no
+    for (let clave in dic) { // Recorre todos los índices que existen sean numéricos o no
         console.log(clave, dic[clave]);
     }
 
-    for(let valor of dic) { // Recorre los índices numéricos desde 0 hasta la longitud del array - 1
+    for (let valor of dic) { // Recorre los índices numéricos desde 0 hasta la longitud del array - 1
         console.log(valor);
     }
 }
@@ -201,26 +201,26 @@ function estructurasDeControl() {
         c++;
     } while (c <= 10);
 
-    for(let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
         console.log(i);
     }
 
     const arr = [2, 5, 7, 98, 90, 8, 65, 4, 3, 4, 6, 7];
 
-    for(let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         console.log(i, arr[i]);
 
-        if(arr[i] > 50) {
+        if (arr[i] > 50) {
             console.log('Encontrado');
             break;
         }
     }
 
-    for(let clave in arr) {
+    for (let clave in arr) {
         console.log(clave, arr[clave]);
     }
 
-    for(let valor of arr) {
+    for (let valor of arr) {
         console.log(valor);
     }
 }
@@ -241,10 +241,10 @@ function adivinaElNumero() {
         intentos++;
         vidas--;
 
-        if(adivinar < numero) {
+        if (adivinar < numero) {
             // Es menor
             alert('Es menor');
-        } else if(adivinar > numero) {
+        } else if (adivinar > numero) {
             // Es mayor
             alert('Es mayor');
         } else {
@@ -252,13 +252,58 @@ function adivinaElNumero() {
             alert('Felicidades, has acertado. Has necesitado ' + intentos + ' intentos');
         }
 
-        if(vidas == 0) {
+        if (vidas == 0) {
             alert('GAME OVER');
             break;
         }
 
-    } while(numero != adivinar); // adivinar != numero
+    } while (numero != adivinar); // adivinar != numero
 
+}
+
+function funciones() {
+    function sumar(a, b) {
+        return a + b;
+    }
+
+    const restar = function (a, b) {
+        return a - b;
+    };
+
+    const multiplicar = (a, b) => a * b;
+
+    console.log(sumar(1, 2));
+    console.log(restar(4, 2));
+    console.log(multiplicar(5, 6));
+    console.log(((a, b) => a / b)(10, 5));
+
+    (function() {
+        let prueba = 5;
+        console.log(prueba);
+    })();
+
+    // console.log(prueba); //No se puede acceder porque está definido dentro de una función anónima en un IIFE
+
+    let operacion = sumar;
+    console.log(operacion(1, 2));
+
+    operacion = restar;
+    console.log(operacion(1, 2));
+
+    operacion = multiplicar;
+    console.log(operacion(1, 2));
+
+    operacion = (a, b) => a / b;
+    console.log(operacion(1, 2));
+
+    function calculadora(a, funcionOperacion, b) {
+        return funcionOperacion(a, b);
+    }
+
+    console.log(calculadora(5, sumar, 3));
+    console.log(calculadora(6, restar, 2));
+    console.log(calculadora(6, function(a, b) { return a * b; }, 3));
+    console.log(calculadora(10, (a, b) => a / b, 5));
 }
 
 // variables();
@@ -268,4 +313,5 @@ function adivinaElNumero() {
 // diccionario();
 // objetos();
 // estructurasDeControl();
-adivinaElNumero();
+// adivinaElNumero();
+funciones();
