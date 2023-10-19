@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+input {
+    font-size: 400%;
+    padding: 0.5rem;
+}
+
+button {
+    font-size: 300%;
+}
+
+input {
+    text-align: right;
+    width: 100%;
+}
+
+#botonera {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

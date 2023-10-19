@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora1.css">
+    <script defer src="js/calculadora1.js"></script>
+</head>
+<body>
+    <form>
+        <input required type="number" step=".001" id="a">
+        <select required id="op">
+            <option value=""></option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <input required type="number" step=".001" id="b">
+        <button id="igual">=</button>
+        <!-- <span id="resultado"></span> -->
+        <input readonly id="resultado" type="text">
+    </form>
+</body>
+</html>
