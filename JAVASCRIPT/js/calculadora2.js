@@ -1,4 +1,4 @@
-const ETIQUETAS = [7, 8, 9, '/', 4, 5, 6, '*', 1, 2, 3, '-', '+/-', 0, ',', '+', 'C', '<=', '%', '='];
+const ETIQUETAS = ['sqrt', '', '', '', 7, 8, 9, '/', 4, 5, 6, '*', 1, 2, 3, '-', '+/-', 0, ',', '+', 'C', '<=', '%', '='];
 
 window.addEventListener('DOMContentLoaded', () => {
     const botonera = document.querySelector('#botonera');
@@ -34,26 +34,73 @@ window.addEventListener('DOMContentLoaded', () => {
                 resultado.value += etiqueta;
                 break;
             case '%':
-                resultado.value /= 100;
+                escribirResultadoNumerico(leerResultado() / 100);
+                break;
+            case 'sqrt':
+                escribirResultadoNumerico(Math.sqrt(leerResultado()));
                 break;
             case 'C':
-                resultado.value = '';
+                vaciarResultado();
                 break;
             case '+':
-                a = +resultado.value;
-                op = '+';
-                resultado.value = '';
+            case '-':
+            case '*':
+            case '/':
+                operacionPulsada(etiqueta);
+                break;
+            case '+/-':
+                escribirResultadoNumerico(-leerResultado());
+                break;
+            case '<=':
+                resultado.value = resultado.value.substring(0, resultado.value.length - 1);
                 break;
             case '=':
-                b = +resultado.value;
+                b = leerResultado();
 
-                switch(op) {
+                switch (op) {
                     case '+':
-                        resultado.value = a + b;
+                        escribirResultadoNumerico(a + b);
+                        break;
+                    case '-':
+                        escribirResultadoNumerico(a - b);
+                        break;
+                    case '*':
+                        escribirResultadoNumerico(a * b);
+                        break;
+                    case '/':
+                        escribirResultadoNumerico(a / b);
                         break;
                     default:
                         resultado.value = 'NO ESTA IMPLEMENTADA';
                 }
         }
+    }
+
+    function escribirResultadoNumerico(dato) {
+        resultado.value = dato.toLocaleString('es', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 9,
+            useGrouping: true
+        });
+    }
+
+    function operacionPulsada(operacion) {
+        if(resultado.value !== '') {
+            a = leerResultado();
+        }
+        
+        op = operacion;
+
+        console.log('guardando', 'a', a, 'op', op);
+
+        vaciarResultado();
+    }
+
+    function leerResultado() {
+        return +resultado.value.replace('.', '').replace(',', '.');
+    }
+
+    function vaciarResultado() {
+        resultado.value = '';
     }
 });

@@ -11,12 +11,12 @@ body {
 }
 
 input {
-    font-size: 400%;
+    font-size: 15vh;
     padding: 0.5rem;
 }
 
 button {
-    font-size: 300%;
+    font-size: 10vh;
 }
 
 input {
