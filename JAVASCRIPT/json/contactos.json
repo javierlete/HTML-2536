@@ -1,0 +1,16 @@
+{
+    "contactos": [
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "numero": "123456789",
+            "fecha": "2020-01-01"
+        },
+        {
+            "id": 2,
+            "nombre": "Pedro",
+            "numero": "987654321",
+            "fecha": "2020-02-02"
+        }
+    ]
+}
